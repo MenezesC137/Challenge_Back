@@ -14,7 +14,8 @@ User.create!(name:  "Carlos Eduardo M. Santos",
             state: 'SP',
             country: 'Brasil',
             phone: '13 99777-7777',
-            photo: 'https://avatars.githubusercontent.com/u/99818568?v=4'
+            photo: 'https://avatars.githubusercontent.com/u/99818568?v=4',
+            follow: false
 )
 
 # Generate a bunch of additional users.
@@ -26,7 +27,7 @@ User.create!(name:  "Carlos Eduardo M. Santos",
   state = Faker::Address.state
   country = Faker::Address.country
   phone = Faker::PhoneNumber.cell_phone
-  photo = Faker::Avatar.image
+  photo = Faker::Avatar.image(format: "jpg")
   User.create!(name:  name,
               email: email,
               age: age,
@@ -34,6 +35,7 @@ User.create!(name:  "Carlos Eduardo M. Santos",
               state: state,
               country: country,
               phone: phone,
-              photo: photo
+              photo: photo,
+              follow: false
   )
 end

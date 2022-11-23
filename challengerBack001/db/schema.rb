@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2022_11_22_133925) do
     t.string "country"
     t.string "state"
     t.string "photo"
-    t.boolean "follow"
+    t.boolean "follow", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
