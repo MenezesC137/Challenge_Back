@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :country
       t.string :state
       t.string :photo
-      t.boolean :follow, null: false, default: ""
+      t.boolean :follow, null: false, default: false
 
       t.timestamps
     end

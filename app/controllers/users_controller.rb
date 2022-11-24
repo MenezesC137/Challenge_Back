@@ -37,6 +37,9 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
   end
+  def home
+    render json: {status: 200, message: "Welcome to the home page"}
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
