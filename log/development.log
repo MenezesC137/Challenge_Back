@@ -30699,3 +30699,635 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 43ms (Views: 35.4ms | ActiveRecord: 4.6ms | Allocations: 27162)
 
 
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20221122133925)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "phone" varchar, "age" varchar, "city" varchar, "country" varchar, "state" varchar, "photo" varchar, "follow" boolean DEFAULT NULL NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221122133925"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-11-24 13:27:45.861588"], ["updated_at", "2022-11-24 13:27:45.861588"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Carlos Eduardo M. Santos"], ["email", "iamcarloseduardo@hotmail.com"], ["phone", "13 99777-7777"], ["age", "22"], ["city", "Santos"], ["country", "Brasil"], ["state", "SP"], ["photo", "https://avatars.githubusercontent.com/u/99818568?v=4"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.012700"], ["updated_at", "2022-11-24 13:27:47.012700"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jennette Fay"], ["email", "dot@herzog.name"], ["phone", "597.104.8683"], ["age", "50"], ["city", "New Santosmouth"], ["country", "Spain"], ["state", "Maryland"], ["photo", "https://robohash.org/eaeumin.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.656719"], ["updated_at", "2022-11-24 13:27:47.656719"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Edmundo Schaefer"], ["email", "lena_conn@rice.org"], ["phone", "699.470.6464"], ["age", "63"], ["city", "Revaburgh"], ["country", "Belgium"], ["state", "Maine"], ["photo", "https://robohash.org/advoluptasfugit.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.664385"], ["updated_at", "2022-11-24 13:27:47.664385"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ines Anderson"], ["email", "setsuko.thiel@pollich-jones.net"], ["phone", "244-853-6556"], ["age", "66"], ["city", "Efrenville"], ["country", "Switzerland"], ["state", "New Hampshire"], ["photo", "https://robohash.org/ducimussiteius.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.670064"], ["updated_at", "2022-11-24 13:27:47.670064"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Murray Hauck"], ["email", "jacinto@kutch.io"], ["phone", "(679) 460-4210"], ["age", "46"], ["city", "Koelpinville"], ["country", "Puerto Rico"], ["state", "Virginia"], ["photo", "https://robohash.org/ipsameaquevoluptas.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.675290"], ["updated_at", "2022-11-24 13:27:47.675290"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Brock Lakin"], ["email", "ghislaine@feil-brown.biz"], ["phone", "1-916-655-6683"], ["age", "25"], ["city", "New Cleo"], ["country", "Ethiopia"], ["state", "Montana"], ["photo", "https://robohash.org/etetillo.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.681243"], ["updated_at", "2022-11-24 13:27:47.681243"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tiara Adams"], ["email", "goldie_mckenzie@carter.com"], ["phone", "280-979-5193"], ["age", "20"], ["city", "East Jefferyshire"], ["country", "Estonia"], ["state", "Illinois"], ["photo", "https://robohash.org/perferendisofficiasint.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.687887"], ["updated_at", "2022-11-24 13:27:47.687887"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Lewis Weimann"], ["email", "edgar@bergnaum-huel.com"], ["phone", "882-004-5165"], ["age", "76"], ["city", "Port Leopoldoborough"], ["country", "Malta"], ["state", "Colorado"], ["photo", "https://robohash.org/quosrecusandaeenim.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.694138"], ["updated_at", "2022-11-24 13:27:47.694138"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fawn Hahn"], ["email", "pamala_waters@boyle-wehner.info"], ["phone", "271-866-0178"], ["age", "62"], ["city", "North Demetriusmouth"], ["country", "Guyana"], ["state", "New Hampshire"], ["photo", "https://robohash.org/remsuntnihil.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.700922"], ["updated_at", "2022-11-24 13:27:47.700922"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dorian Beer"], ["email", "florence.bauch@ankunding.com"], ["phone", "352-747-9989"], ["age", "77"], ["city", "Rogahnton"], ["country", "Heard Island and McDonald Islands"], ["state", "Pennsylvania"], ["photo", "https://robohash.org/nemosintquis.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.707976"], ["updated_at", "2022-11-24 13:27:47.707976"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kristin Brown"], ["email", "thaddeus_boyle@stroman.name"], ["phone", "(905) 051-1008"], ["age", "29"], ["city", "Kirlinbury"], ["country", "Turks and Caicos Islands"], ["state", "South Carolina"], ["photo", "https://robohash.org/undequamillo.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.715329"], ["updated_at", "2022-11-24 13:27:47.715329"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Verlene McClure LLD"], ["email", "hilton@schinner.co"], ["phone", "970-589-5965"], ["age", "31"], ["city", "Charlafort"], ["country", "Latvia"], ["state", "Rhode Island"], ["photo", "https://robohash.org/etmodieos.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.720696"], ["updated_at", "2022-11-24 13:27:47.720696"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pedro Denesik Ret."], ["email", "jacelyn@sporer.co"], ["phone", "265.415.4831"], ["age", "23"], ["city", "North Mark"], ["country", "Swaziland"], ["state", "Colorado"], ["photo", "https://robohash.org/aliasetlaboriosam.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.727303"], ["updated_at", "2022-11-24 13:27:47.727303"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Prof. Bruno Johns"], ["email", "leslie.purdy@hayes-sporer.info"], ["phone", "291-301-0877"], ["age", "60"], ["city", "Macejkovicton"], ["country", "Madagascar"], ["state", "South Carolina"], ["photo", "https://robohash.org/errorautatque.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.732364"], ["updated_at", "2022-11-24 13:27:47.732364"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Garfield Cormier"], ["email", "shirley_emmerich@ritchie-stamm.com"], ["phone", "(570) 422-8567"], ["age", "44"], ["city", "Mayerhaven"], ["country", "Turkey"], ["state", "North Dakota"], ["photo", "https://robohash.org/sintaccusantiumconsequuntur.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.737003"], ["updated_at", "2022-11-24 13:27:47.737003"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dustin Muller Ret."], ["email", "flora.feeney@bogan-hoeger.io"], ["phone", "(721) 108-9313"], ["age", "47"], ["city", "Pasqualeton"], ["country", "Peru"], ["state", "Alabama"], ["photo", "https://robohash.org/totampossimusinventore.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.742610"], ["updated_at", "2022-11-24 13:27:47.742610"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Zachary Bernier"], ["email", "kesha@blick.info"], ["phone", "965-828-9010"], ["age", "68"], ["city", "Port Matthewberg"], ["country", "Tajikistan"], ["state", "Kentucky"], ["photo", "https://robohash.org/placeatautut.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.750229"], ["updated_at", "2022-11-24 13:27:47.750229"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marjory Harber"], ["email", "margeret.hickle@volkman.net"], ["phone", "(758) 367-9568"], ["age", "26"], ["city", "Padbergview"], ["country", "Slovenia"], ["state", "Mississippi"], ["photo", "https://robohash.org/veritatisquidolore.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.756032"], ["updated_at", "2022-11-24 13:27:47.756032"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jerald Daugherty"], ["email", "blondell.cruickshank@olson-beer.net"], ["phone", "331.590.8290"], ["age", "60"], ["city", "North Lemuelchester"], ["country", "Algeria"], ["state", "New Jersey"], ["photo", "https://robohash.org/nihilinventoremolestias.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.773597"], ["updated_at", "2022-11-24 13:27:47.773597"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pandora Emard"], ["email", "pamelia.shields@boehm-balistreri.com"], ["phone", "1-996-398-1849"], ["age", "58"], ["city", "Naomifort"], ["country", "Nauru"], ["state", "Pennsylvania"], ["photo", "https://robohash.org/nisibeataedelectus.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.786096"], ["updated_at", "2022-11-24 13:27:47.786096"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fr. Scottie Hoeger"], ["email", "wesley@ondricka.io"], ["phone", "1-426-821-4065"], ["age", "27"], ["city", "East Samaraborough"], ["country", "Russian Federation"], ["state", "Iowa"], ["photo", "https://robohash.org/etsinteligendi.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.798928"], ["updated_at", "2022-11-24 13:27:47.798928"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vashti Jerde"], ["email", "santos@dach-crooks.info"], ["phone", "(523) 054-2751"], ["age", "45"], ["city", "North Norberto"], ["country", "Puerto Rico"], ["state", "South Dakota"], ["photo", "https://robohash.org/blanditiisquodquia.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.813463"], ["updated_at", "2022-11-24 13:27:47.813463"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ahmad Lowe"], ["email", "verdell_pouros@jaskolski.com"], ["phone", "1-462-305-9931"], ["age", "31"], ["city", "North Marcelino"], ["country", "San Marino"], ["state", "Utah"], ["photo", "https://robohash.org/sitquiut.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.822541"], ["updated_at", "2022-11-24 13:27:47.822541"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iraida Reichel DC"], ["email", "elke@lebsack.net"], ["phone", "(147) 602-4421"], ["age", "39"], ["city", "East Darby"], ["country", "Martinique"], ["state", "Massachusetts"], ["photo", "https://robohash.org/acumdolorem.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.836517"], ["updated_at", "2022-11-24 13:27:47.836517"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fr. Georgine Gerlach"], ["email", "tyson@boyle-senger.biz"], ["phone", "703-469-4717"], ["age", "73"], ["city", "South Raphael"], ["country", "Ethiopia"], ["state", "Utah"], ["photo", "https://robohash.org/utfugiatnesciunt.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.846657"], ["updated_at", "2022-11-24 13:27:47.846657"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lavone Greenholt"], ["email", "avery@lockman.net"], ["phone", "647.109.8617"], ["age", "67"], ["city", "South Tiffanie"], ["country", "Somalia"], ["state", "Rhode Island"], ["photo", "https://robohash.org/laborumadipisciquia.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.855041"], ["updated_at", "2022-11-24 13:27:47.855041"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Zenia Maggio"], ["email", "stella@kerluke-auer.name"], ["phone", "526-175-4493"], ["age", "67"], ["city", "West Micah"], ["country", "Kenya"], ["state", "Connecticut"], ["photo", "https://robohash.org/mollitiaiurevoluptatem.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.862854"], ["updated_at", "2022-11-24 13:27:47.862854"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fidel Grimes LLD"], ["email", "harriette@gleichner.info"], ["phone", "(692) 427-4653"], ["age", "75"], ["city", "North Rossieshire"], ["country", "Mexico"], ["state", "Vermont"], ["photo", "https://robohash.org/nonenimdebitis.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.872598"], ["updated_at", "2022-11-24 13:27:47.872598"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joaquin Ward"], ["email", "tonisha_greenfelder@durgan-raynor.net"], ["phone", "(792) 650-3506"], ["age", "31"], ["city", "Klingbury"], ["country", "Montserrat"], ["state", "Wyoming"], ["photo", "https://robohash.org/repellatautarchitecto.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.886423"], ["updated_at", "2022-11-24 13:27:47.886423"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Prof. Ross Bosco"], ["email", "jonah.nikolaus@becker-gislason.org"], ["phone", "(438) 830-0170"], ["age", "42"], ["city", "New Marcelina"], ["country", "Holy See (Vatican City State)"], ["state", "Wyoming"], ["photo", "https://robohash.org/autminusvoluptatem.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.895503"], ["updated_at", "2022-11-24 13:27:47.895503"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bo Schumm"], ["email", "louie.kiehn@barrows.biz"], ["phone", "841.122.7236"], ["age", "32"], ["city", "Ezrafurt"], ["country", "Sierra Leone"], ["state", "Nevada"], ["photo", "https://robohash.org/doloresaliquamsit.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.901013"], ["updated_at", "2022-11-24 13:27:47.901013"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marvella Kessler"], ["email", "mathilde@anderson.biz"], ["phone", "(685) 920-5024"], ["age", "68"], ["city", "East Del"], ["country", "Cocos (Keeling) Islands"], ["state", "Alaska"], ["photo", "https://robohash.org/doloreetet.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.906265"], ["updated_at", "2022-11-24 13:27:47.906265"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lorri Greenholt"], ["email", "cristobal_ebert@fahey.com"], ["phone", "362.070.7683"], ["age", "21"], ["city", "Handton"], ["country", "South Africa"], ["state", "Alaska"], ["photo", "https://robohash.org/autenimnemo.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.914133"], ["updated_at", "2022-11-24 13:27:47.914133"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jeremiah Gottlieb"], ["email", "scotty.zboncak@okuneva.name"], ["phone", "746.315.6198"], ["age", "67"], ["city", "Lake Cherri"], ["country", "Isle of Man"], ["state", "Maine"], ["photo", "https://robohash.org/adipsaautem.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.920880"], ["updated_at", "2022-11-24 13:27:47.920880"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elisha Lockman"], ["email", "lavona.lueilwitz@paucek.net"], ["phone", "374.984.9958"], ["age", "50"], ["city", "Hermannfort"], ["country", "Guernsey"], ["state", "West Virginia"], ["photo", "https://robohash.org/vitaeipsaaccusantium.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.926901"], ["updated_at", "2022-11-24 13:27:47.926901"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Dalila Stanton"], ["email", "emory_wisoky@leuschke.org"], ["phone", "688-819-3927"], ["age", "32"], ["city", "Lake Shelton"], ["country", "Burundi"], ["state", "New Hampshire"], ["photo", "https://robohash.org/fugaprovidentet.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.932896"], ["updated_at", "2022-11-24 13:27:47.932896"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cedric Collier JD"], ["email", "isabella_schroeder@breitenberg.com"], ["phone", "447-544-0689"], ["age", "45"], ["city", "Elvirastad"], ["country", "Iraq"], ["state", "Colorado"], ["photo", "https://robohash.org/doloreaspernaturin.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.938818"], ["updated_at", "2022-11-24 13:27:47.938818"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maria Yost"], ["email", "christian.legros@gislason.io"], ["phone", "191-577-2281"], ["age", "67"], ["city", "South Young"], ["country", "Marshall Islands"], ["state", "Louisiana"], ["photo", "https://robohash.org/inenimatque.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.945296"], ["updated_at", "2022-11-24 13:27:47.945296"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Carolynn Fritsch"], ["email", "trevor@turcotte-ryan.com"], ["phone", "1-453-221-2132"], ["age", "45"], ["city", "Port Kaleyport"], ["country", "Isle of Man"], ["state", "Ohio"], ["photo", "https://robohash.org/beataeutomnis.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.953379"], ["updated_at", "2022-11-24 13:27:47.953379"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mercedez Witting DO"], ["email", "ramonita@hills.com"], ["phone", "262.525.0550"], ["age", "50"], ["city", "Boyleport"], ["country", "Lesotho"], ["state", "Wyoming"], ["photo", "https://robohash.org/nihilquiasit.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.959963"], ["updated_at", "2022-11-24 13:27:47.959963"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kelle Stiedemann"], ["email", "timmy@brown-weber.net"], ["phone", "(981) 759-2890"], ["age", "21"], ["city", "Jacquiview"], ["country", "Saint Kitts and Nevis"], ["state", "Maryland"], ["photo", "https://robohash.org/quodatdelectus.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.967258"], ["updated_at", "2022-11-24 13:27:47.967258"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Valencia Leuschke"], ["email", "marlene_jacobi@williamson.net"], ["phone", "1-503-173-4147"], ["age", "75"], ["city", "South Damon"], ["country", "Aruba"], ["state", "Arizona"], ["photo", "https://robohash.org/rerumdoloremqueet.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.973879"], ["updated_at", "2022-11-24 13:27:47.973879"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Christena Hand"], ["email", "jeremiah@shields.biz"], ["phone", "(613) 118-9360"], ["age", "33"], ["city", "Dannietown"], ["country", "Morocco"], ["state", "Iowa"], ["photo", "https://robohash.org/repellatveritatismaxime.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:47.985259"], ["updated_at", "2022-11-24 13:27:47.985259"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Loralee Batz"], ["email", "arnoldo_hickle@greenfelder.io"], ["phone", "290.452.4176"], ["age", "73"], ["city", "North Kassandrafort"], ["country", "Malta"], ["state", "Missouri"], ["photo", "https://robohash.org/cumquenemolaboriosam.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.001163"], ["updated_at", "2022-11-24 13:27:48.001163"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Willa Senger"], ["email", "andrea@deckow-veum.info"], ["phone", "464-747-9048"], ["age", "24"], ["city", "East Celestine"], ["country", "Reunion"], ["state", "Maine"], ["photo", "https://robohash.org/veniamrerumqui.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.006658"], ["updated_at", "2022-11-24 13:27:48.006658"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Paul Nicolas"], ["email", "mi@mertz.net"], ["phone", "242-043-5456"], ["age", "30"], ["city", "Connellyport"], ["country", "Peru"], ["state", "South Dakota"], ["photo", "https://robohash.org/doloreeaanimi.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.014172"], ["updated_at", "2022-11-24 13:27:48.014172"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ollie Bartoletti Ret."], ["email", "vernie_hand@ratke-abernathy.name"], ["phone", "1-657-398-2451"], ["age", "20"], ["city", "Vandervortside"], ["country", "Lesotho"], ["state", "Nevada"], ["photo", "https://robohash.org/nisitemporebeatae.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.021607"], ["updated_at", "2022-11-24 13:27:48.021607"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miquel Klocko"], ["email", "rolande@jones.biz"], ["phone", "780-589-8104"], ["age", "43"], ["city", "West Gregorioburgh"], ["country", "Mauritius"], ["state", "Delaware"], ["photo", "https://robohash.org/porroautveniam.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.030221"], ["updated_at", "2022-11-24 13:27:48.030221"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Isa Senger"], ["email", "sammie.denesik@mccullough-luettgen.co"], ["phone", "388-602-4381"], ["age", "73"], ["city", "Howellfort"], ["country", "Dominican Republic"], ["state", "Washington"], ["photo", "https://robohash.org/autdolormollitia.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.036154"], ["updated_at", "2022-11-24 13:27:48.036154"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vonda McGlynn"], ["email", "desmond_schowalter@vonrueden-dubuque.org"], ["phone", "(626) 135-5657"], ["age", "23"], ["city", "Ivoryborough"], ["country", "Zambia"], ["state", "South Dakota"], ["photo", "https://robohash.org/explicabovelitet.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.041162"], ["updated_at", "2022-11-24 13:27:48.041162"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bruno Waelchi"], ["email", "chas.borer@vandervort.io"], ["phone", "827-369-1383"], ["age", "25"], ["city", "Zulauffort"], ["country", "Nauru"], ["state", "Wyoming"], ["photo", "https://robohash.org/atodioerror.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.048344"], ["updated_at", "2022-11-24 13:27:48.048344"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fr. Elmira Quitzon"], ["email", "vernell@ondricka.com"], ["phone", "615-574-0819"], ["age", "63"], ["city", "West Verenatown"], ["country", "Czech Republic"], ["state", "Colorado"], ["photo", "https://robohash.org/utconsequaturdolor.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.054309"], ["updated_at", "2022-11-24 13:27:48.054309"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sonja Hansen"], ["email", "jermaine@feil.name"], ["phone", "(553) 485-0027"], ["age", "54"], ["city", "Ullrichhaven"], ["country", "Saint Vincent and the Grenadines"], ["state", "Iowa"], ["photo", "https://robohash.org/voluptatemutet.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.060102"], ["updated_at", "2022-11-24 13:27:48.060102"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Walker Leuschke"], ["email", "houston.bauch@kassulke.com"], ["phone", "1-453-780-3423"], ["age", "23"], ["city", "Hirtheberg"], ["country", "Japan"], ["state", "Nebraska"], ["photo", "https://robohash.org/voluptasvoluptatibusmaxime.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.066472"], ["updated_at", "2022-11-24 13:27:48.066472"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ezekiel White"], ["email", "kenneth@kohler.io"], ["phone", "(543) 461-4644"], ["age", "29"], ["city", "New Willisport"], ["country", "Croatia"], ["state", "West Virginia"], ["photo", "https://robohash.org/atquecupiditatelaboriosam.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.071870"], ["updated_at", "2022-11-24 13:27:48.071870"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dusty Kozey"], ["email", "abel@tremblay-kautzer.info"], ["phone", "(167) 299-4195"], ["age", "25"], ["city", "Lake Vernita"], ["country", "Luxembourg"], ["state", "Missouri"], ["photo", "https://robohash.org/voluptatemofficiavelit.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.080120"], ["updated_at", "2022-11-24 13:27:48.080120"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Silas Zieme"], ["email", "delmar@okon.co"], ["phone", "292.357.5072"], ["age", "40"], ["city", "Ronaldstad"], ["country", "Grenada"], ["state", "Georgia"], ["photo", "https://robohash.org/undeearumdolor.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.089778"], ["updated_at", "2022-11-24 13:27:48.089778"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cecil Hills"], ["email", "anastacia_bartell@corwin.info"], ["phone", "492-465-9955"], ["age", "50"], ["city", "Lake Rhettshire"], ["country", "Macedonia"], ["state", "New Jersey"], ["photo", "https://robohash.org/assumendanumquammolestiae.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.097729"], ["updated_at", "2022-11-24 13:27:48.097729"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Emerald Kassulke DC"], ["email", "sherly@predovic.co"], ["phone", "215.778.7204"], ["age", "20"], ["city", "East Britt"], ["country", "Lao People's Democratic Republic"], ["state", "Rhode Island"], ["photo", "https://robohash.org/natusexplicaboet.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.103644"], ["updated_at", "2022-11-24 13:27:48.103644"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Danilo Hyatt II"], ["email", "nolan@labadie.biz"], ["phone", "238.613.7356"], ["age", "24"], ["city", "Port Jenniffermouth"], ["country", "Republic of Korea"], ["state", "Maine"], ["photo", "https://robohash.org/illoquiexcepturi.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.111168"], ["updated_at", "2022-11-24 13:27:48.111168"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ed Upton VM"], ["email", "iliana_champlin@nitzsche.co"], ["phone", "390.190.8058"], ["age", "28"], ["city", "Bogisichtown"], ["country", "Andorra"], ["state", "Alaska"], ["photo", "https://robohash.org/abquoblanditiis.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.121362"], ["updated_at", "2022-11-24 13:27:48.121362"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gustavo Berge"], ["email", "alethia.herzog@torp.biz"], ["phone", "(925) 816-4528"], ["age", "78"], ["city", "Terinaville"], ["country", "Saint Helena"], ["state", "South Carolina"], ["photo", "https://robohash.org/velinventoreautem.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.129798"], ["updated_at", "2022-11-24 13:27:48.129798"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jeanelle Schaden"], ["email", "woodrow_murray@rosenbaum.io"], ["phone", "119-157-5779"], ["age", "28"], ["city", "Matthewfurt"], ["country", "Djibouti"], ["state", "Maryland"], ["photo", "https://robohash.org/enimdoloremqueautem.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.135131"], ["updated_at", "2022-11-24 13:27:48.135131"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winston Daugherty"], ["email", "ardell_hamill@rogahn.info"], ["phone", "139.457.6856"], ["age", "43"], ["city", "Lake Brucetown"], ["country", "Holy See (Vatican City State)"], ["state", "Arkansas"], ["photo", "https://robohash.org/etdoloressoluta.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.141024"], ["updated_at", "2022-11-24 13:27:48.141024"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Prof. Marcus Crona"], ["email", "jamie.bauch@doyle.name"], ["phone", "455-072-1173"], ["age", "56"], ["city", "Sherikafort"], ["country", "Isle of Man"], ["state", "Maryland"], ["photo", "https://robohash.org/voluptatemnemoautem.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.147817"], ["updated_at", "2022-11-24 13:27:48.147817"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Josef Walker"], ["email", "lindsay_abbott@adams.net"], ["phone", "(618) 429-2538"], ["age", "80"], ["city", "Lorettehaven"], ["country", "Rwanda"], ["state", "Virginia"], ["photo", "https://robohash.org/nobispariaturaccusantium.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.154323"], ["updated_at", "2022-11-24 13:27:48.154323"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Harrison Boehm"], ["email", "robt_schroeder@schultz.io"], ["phone", "(947) 667-0393"], ["age", "69"], ["city", "Kingbury"], ["country", "Cambodia"], ["state", "Missouri"], ["photo", "https://robohash.org/deseruntducimusea.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.161901"], ["updated_at", "2022-11-24 13:27:48.161901"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jocelyn West CPA"], ["email", "marshall_grady@pacocha.name"], ["phone", "690-313-3609"], ["age", "20"], ["city", "Stoltenbergland"], ["country", "Liberia"], ["state", "Arizona"], ["photo", "https://robohash.org/blanditiisoptiopraesentium.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.179181"], ["updated_at", "2022-11-24 13:27:48.179181"]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Myrtice Padberg"], ["email", "bud_schimmel@hauck-cormier.net"], ["phone", "248-605-4459"], ["age", "70"], ["city", "Lake Dwain"], ["country", "Turkmenistan"], ["state", "North Carolina"], ["photo", "https://robohash.org/laboriosammaximerepellat.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.198911"], ["updated_at", "2022-11-24 13:27:48.198911"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dacia Cronin"], ["email", "alvaro_johnston@larkin.co"], ["phone", "(435) 530-0092"], ["age", "59"], ["city", "Yenborough"], ["country", "Jordan"], ["state", "Missouri"], ["photo", "https://robohash.org/sintcupiditatenon.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.205942"], ["updated_at", "2022-11-24 13:27:48.205942"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Hon. Ardella Hayes"], ["email", "earle.barton@crist-barton.org"], ["phone", "843.842.2399"], ["age", "37"], ["city", "Cassinchester"], ["country", "Myanmar"], ["state", "Ohio"], ["photo", "https://robohash.org/oditteneturdolorum.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.214325"], ["updated_at", "2022-11-24 13:27:48.214325"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chase Schulist"], ["email", "barry_boehm@botsford.io"], ["phone", "745.611.3107"], ["age", "43"], ["city", "East Theronburgh"], ["country", "South Georgia and the South Sandwich Islands"], ["state", "Idaho"], ["photo", "https://robohash.org/undeomnisexercitationem.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.223980"], ["updated_at", "2022-11-24 13:27:48.223980"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Raymond Herman"], ["email", "drew_frami@king-hand.biz"], ["phone", "(861) 349-5630"], ["age", "78"], ["city", "Port Janene"], ["country", "Estonia"], ["state", "Hawaii"], ["photo", "https://robohash.org/sapientevoluptatemet.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.230234"], ["updated_at", "2022-11-24 13:27:48.230234"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chan Thompson Ret."], ["email", "shondra@williamson.info"], ["phone", "602-670-7412"], ["age", "46"], ["city", "North Eusebiaburgh"], ["country", "Saint Martin"], ["state", "Colorado"], ["photo", "https://robohash.org/quamaccusantiumat.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.235692"], ["updated_at", "2022-11-24 13:27:48.235692"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Darrin Connelly"], ["email", "angelo@huel.name"], ["phone", "1-938-629-7005"], ["age", "77"], ["city", "Vandervorttown"], ["country", "Georgia"], ["state", "North Dakota"], ["photo", "https://robohash.org/sitdelenitipossimus.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.242804"], ["updated_at", "2022-11-24 13:27:48.242804"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chuck Feeney"], ["email", "ronald_hoeger@sipes.org"], ["phone", "(753) 094-1257"], ["age", "46"], ["city", "Gottliebmouth"], ["country", "Malta"], ["state", "New Hampshire"], ["photo", "https://robohash.org/sintvelut.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.262352"], ["updated_at", "2022-11-24 13:27:48.262352"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Wendell Hermiston"], ["email", "nohemi.feest@fay.name"], ["phone", "1-342-945-4823"], ["age", "79"], ["city", "Port Sofia"], ["country", "Malawi"], ["state", "Connecticut"], ["photo", "https://robohash.org/nonhicomnis.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.300198"], ["updated_at", "2022-11-24 13:27:48.300198"]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Carrol Beahan"], ["email", "keenan_kuhn@mcdermott-hodkiewicz.info"], ["phone", "700-484-1318"], ["age", "79"], ["city", "Erdmanstad"], ["country", "Indonesia"], ["state", "Kentucky"], ["photo", "https://robohash.org/quissintnam.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.311074"], ["updated_at", "2022-11-24 13:27:48.311074"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Berna O'Connell DO"], ["email", "tabitha_price@gerhold-wolf.net"], ["phone", "1-938-078-1950"], ["age", "65"], ["city", "New Wenonahaven"], ["country", "Sierra Leone"], ["state", "Tennessee"], ["photo", "https://robohash.org/voluptatemautvoluptas.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.321798"], ["updated_at", "2022-11-24 13:27:48.321798"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Msgr. Malcolm Berge"], ["email", "maia@bogisich.net"], ["phone", "147-859-0373"], ["age", "52"], ["city", "North Dejahaven"], ["country", "Bhutan"], ["state", "Illinois"], ["photo", "https://robohash.org/rerumrepellendusaut.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.329975"], ["updated_at", "2022-11-24 13:27:48.329975"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Long Jast"], ["email", "staci.damore@mcclure.net"], ["phone", "272-628-1787"], ["age", "73"], ["city", "Hoppeville"], ["country", "Austria"], ["state", "Connecticut"], ["photo", "https://robohash.org/quibusdamablanditiis.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.335402"], ["updated_at", "2022-11-24 13:27:48.335402"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fr. Pilar Durgan"], ["email", "jerrold@berge-osinski.org"], ["phone", "1-718-494-4933"], ["age", "25"], ["city", "Sherronshire"], ["country", "Virgin Islands, British"], ["state", "Indiana"], ["photo", "https://robohash.org/consecteturrepudiandaeeveniet.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.340668"], ["updated_at", "2022-11-24 13:27:48.340668"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bruna Boyle"], ["email", "ned@hartmann-rosenbaum.com"], ["phone", "633.940.7883"], ["age", "57"], ["city", "West Nicky"], ["country", "Guinea-Bissau"], ["state", "Nevada"], ["photo", "https://robohash.org/natussaepeofficiis.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.354602"], ["updated_at", "2022-11-24 13:27:48.354602"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lonna Schultz LLD"], ["email", "theron@cassin.org"], ["phone", "1-356-753-5145"], ["age", "74"], ["city", "Jacquiport"], ["country", "Yemen"], ["state", "Iowa"], ["photo", "https://robohash.org/iustopossimusdignissimos.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.376858"], ["updated_at", "2022-11-24 13:27:48.376858"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Hilton Haag"], ["email", "russel.kuphal@marks.net"], ["phone", "228.579.5434"], ["age", "56"], ["city", "Bogisichhaven"], ["country", "Lithuania"], ["state", "Alabama"], ["photo", "https://robohash.org/quiaaliquamea.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.386872"], ["updated_at", "2022-11-24 13:27:48.386872"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dayna Conroy"], ["email", "camille_okon@kilback.com"], ["phone", "(941) 499-3311"], ["age", "38"], ["city", "Port Avril"], ["country", "Nigeria"], ["state", "Minnesota"], ["photo", "https://robohash.org/quasioditnesciunt.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.397024"], ["updated_at", "2022-11-24 13:27:48.397024"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Clarisa Wunsch"], ["email", "jason@bashirian-greenholt.info"], ["phone", "931-267-7313"], ["age", "26"], ["city", "North Dannaland"], ["country", "Togo"], ["state", "Ohio"], ["photo", "https://robohash.org/ametaliasvoluptatibus.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.408647"], ["updated_at", "2022-11-24 13:27:48.408647"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rex Thiel"], ["email", "alonso@wuckert.io"], ["phone", "576.292.2005"], ["age", "19"], ["city", "Maggioville"], ["country", "Anguilla"], ["state", "Utah"], ["photo", "https://robohash.org/quiestaperiam.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.418941"], ["updated_at", "2022-11-24 13:27:48.418941"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Merideth Ebert"], ["email", "kyle@kulas.io"], ["phone", "618.066.7602"], ["age", "68"], ["city", "O'Reillyville"], ["country", "Aruba"], ["state", "New Hampshire"], ["photo", "https://robohash.org/laborumporrocorporis.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.429015"], ["updated_at", "2022-11-24 13:27:48.429015"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Andreas Dickinson"], ["email", "brigid.torphy@torphy.name"], ["phone", "(923) 574-8053"], ["age", "47"], ["city", "South Maryville"], ["country", "Guernsey"], ["state", "Nevada"], ["photo", "https://robohash.org/perspiciatisquamest.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.437015"], ["updated_at", "2022-11-24 13:27:48.437015"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (16.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nathanael Hahn"], ["email", "laurence.block@medhurst.org"], ["phone", "683-879-3761"], ["age", "40"], ["city", "O'Reillyview"], ["country", "Switzerland"], ["state", "Utah"], ["photo", "https://robohash.org/consequaturnihilitaque.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.443471"], ["updated_at", "2022-11-24 13:27:48.443471"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gov. Javier Runte"], ["email", "edwardo.leffler@beer.com"], ["phone", "1-655-662-3853"], ["age", "25"], ["city", "Collinburgh"], ["country", "Costa Rica"], ["state", "North Carolina"], ["photo", "https://robohash.org/ametvoluptatibusaut.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.484443"], ["updated_at", "2022-11-24 13:27:48.484443"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Christia Durgan"], ["email", "roland_marvin@bauch.net"], ["phone", "420-046-4166"], ["age", "63"], ["city", "Corineton"], ["country", "Montserrat"], ["state", "Massachusetts"], ["photo", "https://robohash.org/cupiditaterepellendusdolores.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.494323"], ["updated_at", "2022-11-24 13:27:48.494323"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Luther Beer I"], ["email", "twanda@bergstrom.io"], ["phone", "1-883-470-3887"], ["age", "27"], ["city", "Lake Mindyfort"], ["country", "United Kingdom"], ["state", "Michigan"], ["photo", "https://robohash.org/molestiaeeoseveniet.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.503739"], ["updated_at", "2022-11-24 13:27:48.503739"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Francisco Cummings"], ["email", "casandra_ullrich@lang.name"], ["phone", "887-977-8354"], ["age", "42"], ["city", "North Luise"], ["country", "Trinidad and Tobago"], ["state", "Colorado"], ["photo", "https://robohash.org/omnisvelincidunt.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.511794"], ["updated_at", "2022-11-24 13:27:48.511794"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sterling Dooley"], ["email", "mable.stiedemann@prohaska.org"], ["phone", "584-069-3850"], ["age", "44"], ["city", "West Trinidadburgh"], ["country", "Morocco"], ["state", "Minnesota"], ["photo", "https://robohash.org/natusiddolore.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.520251"], ["updated_at", "2022-11-24 13:27:48.520251"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maria Pfannerstill"], ["email", "yasmine.towne@medhurst-cummings.biz"], ["phone", "595-491-4048"], ["age", "47"], ["city", "Swaniawskiborough"], ["country", "Cyprus"], ["state", "North Carolina"], ["photo", "https://robohash.org/quaeminimaut.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.529655"], ["updated_at", "2022-11-24 13:27:48.529655"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mr. Brandon Krajcik"], ["email", "ray_rempel@deckow.info"], ["phone", "(741) 530-4623"], ["age", "80"], ["city", "Lake Roland"], ["country", "Martinique"], ["state", "New York"], ["photo", "https://robohash.org/minimabeataeporro.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.536016"], ["updated_at", "2022-11-24 13:27:48.536016"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rev. Isidro Wuckert"], ["email", "johanna_reynolds@west-russel.biz"], ["phone", "531.042.8118"], ["age", "54"], ["city", "North Berry"], ["country", "Northern Mariana Islands"], ["state", "Kansas"], ["photo", "https://robohash.org/quiarchitectomagnam.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.540768"], ["updated_at", "2022-11-24 13:27:48.540768"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone", "age", "city", "country", "state", "photo", "follow", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Theo Schaefer"], ["email", "dewey.mayert@quigley.io"], ["phone", "(201) 068-8065"], ["age", "33"], ["city", "DuBuqueport"], ["country", "United Arab Emirates"], ["state", "North Carolina"], ["photo", "https://robohash.org/noneosvoluptas.jpg?size=300x300&set=set1"], ["follow", 0], ["created_at", "2022-11-24 13:27:48.551248"], ["updated_at", "2022-11-24 13:27:48.551248"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users" for ::1 at 2022-11-24 10:28:06 -0300
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 44.0ms | ActiveRecord: 8.9ms | Allocations: 29259)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:06 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 85ms (Views: 82.7ms | ActiveRecord: 0.8ms | Allocations: 19809)
+
+
+Started PATCH "/users/99" for ::1 at 2022-11-24 10:28:15 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"99", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:28:15.890158"], ["id", 99]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 16ms (Views: 1.1ms | ActiveRecord: 2.3ms | Allocations: 3943)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:15 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.5ms | Allocations: 19798)
+
+
+Started PATCH "/users/53" for ::1 at 2022-11-24 10:28:20 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"53", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (4.5ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:28:20.732254"], ["id", 53]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 19ms (Views: 1.8ms | ActiveRecord: 10.3ms | Allocations: 2361)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:20 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 47.7ms | ActiveRecord: 0.5ms | Allocations: 19793)
+
+
+Started PATCH "/users/14" for ::1 at 2022-11-24 10:28:23 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"14", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:28:23.273946"], ["id", 14]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 3.9ms | Allocations: 2355)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:23 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.6ms | Allocations: 19794)
+
+
+Started PATCH "/users/3" for ::1 at 2022-11-24 10:28:26 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"3", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:28:26.475164"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 4.2ms | Allocations: 2355)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:26 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.8ms | Allocations: 19794)
+
+
+Started PATCH "/users/98" for ::1 at 2022-11-24 10:28:35 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"98", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 98], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:28:35.896436"], ["id", 98]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 3.5ms | Allocations: 2339)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:35 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.7ms | Allocations: 19793)
+
+
+Started PATCH "/users/99" for ::1 at 2022-11-24 10:28:41 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>false, "id"=>"99", "user"=>{"follow"=>false}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 0], ["updated_at", "2022-11-24 13:28:41.325568"], ["id", 99]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.6ms | Allocations: 2342)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:41 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.5ms | Allocations: 19793)
+
+
+Started PATCH "/users/72" for ::1 at 2022-11-24 10:28:43 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"72", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:28:43.723845"], ["id", 72]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 2.1ms | Allocations: 2336)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:43 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.8ms | Allocations: 19794)
+
+
+Started PATCH "/users/72" for ::1 at 2022-11-24 10:28:44 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>false, "id"=>"72", "user"=>{"follow"=>false}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 0], ["updated_at", "2022-11-24 13:28:44.591100"], ["id", 72]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 4.6ms | Allocations: 2337)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:44 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.7ms | Allocations: 19794)
+
+
+Started PATCH "/users/72" for ::1 at 2022-11-24 10:28:45 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"72", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:28:45.324362"], ["id", 72]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 3.8ms | Allocations: 2336)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:45 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 1.2ms | Allocations: 19794)
+
+
+Started PATCH "/users/72" for ::1 at 2022-11-24 10:28:45 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>false, "id"=>"72", "user"=>{"follow"=>false}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 0], ["updated_at", "2022-11-24 13:28:45.960025"], ["id", 72]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 3.7ms | Allocations: 2336)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:45 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.9ms | Allocations: 19793)
+
+
+Started PATCH "/users/28" for ::1 at 2022-11-24 10:28:50 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"28", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:28:50.666194"], ["id", 28]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.7ms | Allocations: 2336)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:50 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.7ms | Allocations: 19794)
+
+
+Started PATCH "/users/55" for ::1 at 2022-11-24 10:28:57 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"55", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (5.4ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:28:57.389741"], ["id", 55]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 23ms (Views: 2.1ms | ActiveRecord: 10.3ms | Allocations: 2337)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:28:57 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 2.8ms | Allocations: 19794)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-11-24 10:29:18 -0300
+Processing by UsersController#index as */*
+Started GET "/users" for 127.0.0.1 at 2022-11-24 10:29:18 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 43.1ms | ActiveRecord: 1.1ms | Allocations: 20408)
+
+
+Completed 200 OK in 84ms (Views: 81.0ms | ActiveRecord: 2.8ms | Allocations: 38991)
+
+
+Started PATCH "/users/16" for ::1 at 2022-11-24 10:30:57 -0300
+Processing by UsersController#update as */*
+  Parameters: {"follow"=>true, "id"=>"16", "user"=>{"follow"=>true}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "follow" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["follow", 1], ["updated_at", "2022-11-24 13:30:57.245311"], ["id", 16]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 2.9ms | Allocations: 2389)
+
+
+Started GET "/users" for ::1 at 2022-11-24 10:30:57 -0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.6ms | Allocations: 19793)
+
+
